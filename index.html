@@ -10,17 +10,30 @@
 <body>
     <div class="container">
         <h1>Pomodoro Timer</h1>
+        <button id="toggle-mode" class="theme-toggle">☽</button>
+        
+        <div id="task-display" class="task-display"></div>
+        
         <div class="timer">
             <span id="minutes">25</span>:<span id="seconds">00</span>
         </div>
+        
         <div class="controls">
-            <button id="start">Start</button>
-            <button id="pause">Pause</button>
-            <button id="reset">Reset</button>
-            <button id="toggle-mode">Switch Mode</button>
+            <button id="start" class="primary-btn">Start</button>
+            <button id="pause" class="primary-btn" disabled>Pause</button>
+            <button id="add-time" class="secondary-btn">+5 min</button>
+            <button id="reset" class="secondary-btn">Reset</button>
         </div>
-        <div class="mode">
-            <span id="mode-text">Work Time</span>
+        
+        <p id="mode-text">Work Time</p>
+    </div>
+    
+    <div id="task-modal" class="modal">
+        <div class="modal-content">
+            <h2>What are you focusing on?</h2>
+            <input type="text" id="task-input" placeholder="Enter your focus...">
+            <button id="task-submit" class="primary-btn">Start Focusing</button>
+            <p class="modal-hint">Press Esc to skip</p>
         </div>
     </div>
     <script src="script.js"></script>
