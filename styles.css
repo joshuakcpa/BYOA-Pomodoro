@@ -1,0 +1,127 @@
+:root {
+    --primary: #7C3AED;    /* Purple */
+    --primary-dark: #6D28D9;
+    --success: #10B981;    /* Green */
+    --success-dark: #059669;
+    --danger: #EF4444;     /* Red */
+    --danger-dark: #DC2626;
+    --neutral: #6B7280;    /* Gray */
+    --neutral-dark: #4B5563;
+    --background: #F9FAFB;
+    --card: #FFFFFF;
+    --text: #1F2937;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.container {
+    text-align: center;
+    background-color: var(--card);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    width: 90%;
+    max-width: 400px;
+    transition: transform 0.2s ease;
+}
+
+.container:hover {
+    transform: translateY(-2px);
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--text);
+}
+
+.timer {
+    font-size: 5rem;
+    font-weight: 700;
+    margin: 2rem 0;
+    color: var(--primary);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -2px;
+}
+
+.controls {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.controls button {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    transition: all 0.2s ease;
+    flex: 1;
+    min-width: 100px;
+    max-width: 150px;
+}
+
+.controls button:active {
+    transform: scale(0.95);
+}
+
+#start {
+    background-color: var(--success);
+}
+
+#start:hover {
+    background-color: var(--success-dark);
+}
+
+#pause {
+    background-color: var(--danger);
+}
+
+#pause:hover {
+    background-color: var(--danger-dark);
+}
+
+#reset {
+    background-color: var(--neutral);
+}
+
+#reset:hover {
+    background-color: var(--neutral-dark);
+}
+
+#toggle-mode {
+    background-color: var(--primary);
+}
+
+#toggle-mode:hover {
+    background-color: var(--primary-dark);
+}
+
+.mode {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--neutral);
+}
+
+#mode-text {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--background);
+    border-radius: 999px;
+    transition: all 0.3s ease;
+} 
